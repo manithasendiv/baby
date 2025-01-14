@@ -4,7 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <style>
+        @mixin flex-center() {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .container {
+            width: 50rem;
+            height: 20rem;
+            position: relative;
+          }
+          
+          .svg-container {
+            z-index: 2;
+            position: absolute;
+          }
+          
+          .mo-container {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .line {
+            fill: none;
+            stroke: $col-line;
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+          }
+          
+          .lttr {
+            fill: $col-lttr;
+          }
+          
+          .sound {
+            position: fixed;
+            color: $col-lttr;
+            font-size: 1.6rem;
+            bottom: 1rem;
+            right: 1rem;
+            text-decoration: underline;
+            cursor: default;
+            &--off {
+              text-decoration: line-through;
+            }
+          }
+          
+    </style>
 </head>
 <body>
     <div class="container">
